@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Bin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Add Waste Bin</h1>
+
+<form method="POST" action="/add">
+
+<input type="text" name="location" placeholder="Bin Location" required>
+
+<br><br>
+
+<input type="number" name="level" placeholder="Waste Level %" required>
+
+<br><br>
+
+<select name="status">
+    <option value="Full">Full</option>
+    <option value="Empty">Empty</option>
+</select>
+
+<br><br>
+
+<button type="submit">Save Bin</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

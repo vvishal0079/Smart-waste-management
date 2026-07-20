@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>View Bins</title>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Waste Bin Details</h1>
+
+<table border="1">
+
+<tr>
+<th>ID</th>
+<th>Location</th>
+<th>Level</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+
+
+{% for row in data %}
+
+<tr>
+
+<td>{{row[0]}}</td>
+
+<td>{{row[1]}}</td>
+
+<td>{{row[2]}}</td>
+
+<td>{{row[3]}}</td>
+
+<td>
+
+<a href="/update/{{row[0]}}">
+<button>Edit</button>
+</a>
+
+
+<a href="/delete/{{row[0]}}">
+<button>Delete</button>
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+
+</table>
+
+</div>
+
+</body>
+</html>

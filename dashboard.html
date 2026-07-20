@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Dashboard</h1>
+
+<h2>Total Bins : {{ total }}</h2>
+
+<h2>Full Bins : {{ full }}</h2>
+
+<h2>Empty Bins : {{ empty }}</h2>
+
+<h2>Total Pickup Requests : {{ requests }}</h2>
+
+<h2>Pending Requests : {{ pending }}</h2>
+
+<h2>Completed Requests : {{ completed }}</h2>
+
+<br>
+
+<a href="/add">
+<button>Add Waste Bin</button>
+</a>
+
+<a href="/view">
+<button>View Waste Bins</button>
+</a>
+
+<a href="/requests">
+<button>View Pickup Requests</button>
+</a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Pickup Requests</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Waste Pickup Requests</h1>
+
+
+<table border="1">
+
+<tr>
+<th>ID</th>
+<th>User ID</th>
+<th>Waste Type</th>
+<th>Location</th>
+<th>Date</th>
+<th>Status</th>
+</tr>
+
+
+{% for row in data %}
+
+<tr>
+
+<td>{{row[0]}}</td>
+<td>{{row[1]}}</td>
+<td>{{row[2]}}</td>
+<td>{{row[3]}}</td>
+<td>{{row[4]}}</td>
+<td>{{row[5]}}</td>
+
+</tr>
+
+{% endfor %}
+
+
+</table>
+
+
+</div>
+
+</body>
+
+</html>

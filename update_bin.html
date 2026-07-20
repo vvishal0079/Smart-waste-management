@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Bin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Update Waste Bin</h1>
+
+<form method="POST">
+
+<input type="text" name="location" value="{{data[1]}}" required>
+
+<br><br>
+
+<input type="number" name="level" value="{{data[2]}}" required>
+
+<br><br>
+
+<select name="status">
+
+<option value="Full">Full</option>
+<option value="Empty">Empty</option>
+
+</select>
+
+<br><br>
+
+<button type="submit">Update</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

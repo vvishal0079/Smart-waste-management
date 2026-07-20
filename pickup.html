@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Waste Pickup Request</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Request Waste Pickup</h1>
+
+<form method="POST" action="/pickup">
+
+<input type="text" name="waste_type" placeholder="Waste Type" required>
+
+<br><br>
+
+<input type="text" name="location" placeholder="Pickup Location" required>
+
+<br><br>
+
+<input type="date" name="date" required>
+
+<br><br>
+
+<button type="submit">Send Request</button>
+
+</form>
+
+</div>
+
+</body>
+
+</html>
